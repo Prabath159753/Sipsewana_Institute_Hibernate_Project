@@ -77,3 +77,15 @@
     -fx-font-family: "Times New Roman";
     -fx-font-size: 18px;
 }
+
+.dashboardPane {
+    -fx-background-color: linear-gradient(to right, #061b32, #000203);
+}
+
+.btn-nav:hover{
+    -fx-cursor: hand;
+    -fx-background-radius: 100 0 0 100;
+    /*-fx-background-color:  #89aec9;*/
+    -fx-text-fill: black;
+    -fx-background-color:  #8484F7;
+}
