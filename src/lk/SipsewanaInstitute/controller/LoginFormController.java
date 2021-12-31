@@ -3,11 +3,15 @@ package lk.SipsewanaInstitute.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import javafx.animation.FadeTransition;
+import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.util.regex.Pattern;
 
@@ -27,6 +31,8 @@ public class LoginFormController {
     public ImageView imgLogo;
 
     public void initialize() {
+        fadeTransition();
+        rotateAnimation();
         txtPasswordClone.setVisible(false);
         btnInvisible.setVisible(false);
     }
@@ -71,5 +77,24 @@ public class LoginFormController {
     }
 
     void loadUI() {
+    }
+
+    void fadeTransition() {
+
+        FadeTransition fadeIn = new FadeTransition(Duration.millis(2000), root);
+        fadeIn.setFromValue(0.0);
+        fadeIn.setToValue(1.0);
+        fadeIn.play();
+    }
+
+    void rotateAnimation() {
+        RotateTransition transition = new RotateTransition();
+        transition.setAxis(Rotate.Y_AXIS);
+        transition.setByAngle(360);
+        transition.setCycleCount(500);
+        transition.setDuration(Duration.seconds(15));
+        transition.setAutoReverse(true);
+        transition.setNode(imgLogo);
+        transition.play();
     }
 }
