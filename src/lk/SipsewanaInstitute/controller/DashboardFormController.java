@@ -106,13 +106,18 @@ public class DashboardFormController {
         DashboardContext.getChildren().add(load);
     }
 
-    public void goToRegisterOnAction(ActionEvent actionEvent) {
+    public void goToRegisterOnAction(ActionEvent actionEvent) throws IOException {
         btnRegister.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnStudent.setStyle(null);
         btnCourse.setStyle(null);
         btnDashboard.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+
+        URL resource = getClass().getResource("../view/RegistrationForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        DashboardContext.getChildren().clear();
+        DashboardContext.getChildren().add(load);
     }
 
     public void goToExitOnAction(ActionEvent actionEvent) throws IOException {
