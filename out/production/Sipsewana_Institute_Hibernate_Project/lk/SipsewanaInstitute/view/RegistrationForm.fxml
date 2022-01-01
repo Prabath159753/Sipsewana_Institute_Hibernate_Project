@@ -247,7 +247,7 @@
                   <Font name="Times New Roman Bold Italic" size="18.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtRegFee" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="28.0" prefHeight="32.0" prefWidth="243.0" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtRegFee" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="28.0" prefHeight="32.0" prefWidth="243.0" styleClass="text" unFocusColor="WHITE">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
@@ -269,15 +269,30 @@
             </Label>
          </children>
       </Pane>
-      <TableView layoutX="471.0" layoutY="446.0" prefHeight="287.0" prefWidth="595.0" stylesheets="@assets/style/tableStyle.css">
+      <TableView fx:id="tblCourse1" layoutX="471.0" layoutY="446.0" prefHeight="287.0" prefWidth="595.0" stylesheets="@assets/style/tableStyle.css">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="Column X" />
-            <TableColumn prefWidth="75.0" text="Column X" />
-            <TableColumn prefWidth="75.0" text="Column X" />
-            <TableColumn prefWidth="75.0" text="Column X" />
+          <TableColumn fx:id="colCode1" prefWidth="68.0" text="Code" />
+          <TableColumn fx:id="colCName1" prefWidth="123.0" text="Name" />
+            <TableColumn fx:id="colType1" prefWidth="84.0" text="Type" />
+            <TableColumn fx:id="colDurationC1" prefWidth="85.0" text="Duration" />
+            <TableColumn fx:id="colFeeC1" prefWidth="139.0" text="Fee(Rs.)" />
+            <TableColumn fx:id="colDeleteC1" prefWidth="91.0" text="Remove" />
         </columns>
       </TableView>
+      <JFXButton fx:id="btnReg" buttonType="RAISED" layoutX="55.0" layoutY="629.0" onAction="#btnRegOnAction" prefHeight="50.0" prefWidth="373.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #c44569;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="26.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5227272727272727" centerY="0.5097087378640777" radius="0.9268292682926829">
+               <stops>
+                  <Stop color="#b9151f" />
+                  <Stop color="#ff3b48" offset="0.14855072463768115" />
+                  <Stop color="WHITE" offset="0.33766695083830633" />
+                  <Stop color="#d54dff" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
    </children>
 </AnchorPane>
