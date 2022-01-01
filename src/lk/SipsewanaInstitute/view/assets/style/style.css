@@ -79,7 +79,7 @@
 }
 
 .dashboardPane {
-    -fx-background-color: linear-gradient(to right, #061b32, #000203);
+    -fx-background-color: linear-gradient(to right, #061b32, #05182C);
 }
 
 .btn-nav:hover{
@@ -88,4 +88,12 @@
     /*-fx-background-color:  #89aec9;*/
     -fx-text-fill: black;
     -fx-background-color:  #8484F7;
+}
+
+.dPane {
+    -fx-background-color: linear-gradient(to right, #2D3A6C, #1E2D55);
+}
+
+.text{
+    -fx-text-fill: white;
 }

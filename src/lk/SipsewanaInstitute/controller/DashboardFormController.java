@@ -57,7 +57,7 @@ public class DashboardFormController {
     }
 
     public void goToDashboardOnAction(ActionEvent actionEvent) {
-        btnDashboard.setStyle("-fx-background-color: #8484F7 ; -fx-text-fill: black; -fx-background-radius: 100 0 0 100");
+        btnDashboard.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnStudent.setStyle(null);
         btnCourse.setStyle(null);
         btnRegister.setStyle(null);
@@ -66,7 +66,7 @@ public class DashboardFormController {
     }
 
     public void goToSettingOnAction(ActionEvent actionEvent) {
-        btnSetting.setStyle("-fx-background-color: #8484F7 ; -fx-text-fill: black; -fx-background-radius: 100 0 0 100");
+        btnSetting.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnStudent.setStyle(null);
         btnCourse.setStyle(null);
         btnRegister.setStyle(null);
@@ -75,7 +75,7 @@ public class DashboardFormController {
     }
 
     public void goToHelpOnAction(ActionEvent actionEvent) {
-        btnHelp.setStyle("-fx-background-color: #8484F7 ; -fx-text-fill: black; -fx-background-radius: 100 0 0 100");
+        btnHelp.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnStudent.setStyle(null);
         btnCourse.setStyle(null);
         btnRegister.setStyle(null);
@@ -84,7 +84,7 @@ public class DashboardFormController {
     }
 
     public void goToStudentDetailOnAction(ActionEvent actionEvent) {
-        btnStudent.setStyle("-fx-background-color: #8484F7 ; -fx-text-fill: black; -fx-background-radius: 100 0 0 100");
+        btnStudent.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnDashboard.setStyle(null);
         btnCourse.setStyle(null);
         btnRegister.setStyle(null);
@@ -92,17 +92,22 @@ public class DashboardFormController {
         btnSetting.setStyle(null);
     }
 
-    public void goToCourseOnAction(ActionEvent actionEvent) {
-        btnCourse.setStyle("-fx-background-color: #8484F7 ; -fx-text-fill: black; -fx-background-radius: 100 0 0 100");
+    public void goToCourseOnAction(ActionEvent actionEvent) throws IOException {
+        btnCourse.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnStudent.setStyle(null);
         btnDashboard.setStyle(null);
         btnRegister.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+
+        URL resource = getClass().getResource("../view/CourseDetailsForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        DashboardContext.getChildren().clear();
+        DashboardContext.getChildren().add(load);
     }
 
     public void goToRegisterOnAction(ActionEvent actionEvent) {
-        btnRegister.setStyle("-fx-background-color: #8484F7 ; -fx-text-fill: black; -fx-background-radius: 100 0 0 100");
+        btnRegister.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnStudent.setStyle(null);
         btnCourse.setStyle(null);
         btnDashboard.setStyle(null);
