@@ -1,6 +1,7 @@
 package lk.SipsewanaInstitute.bo;
 
 import lk.SipsewanaInstitute.bo.custom.impl.CourseBOImpl;
+import lk.SipsewanaInstitute.bo.custom.impl.StudentBOImpl;
 
 /**
  * @author : Kavishka Prabath
@@ -21,12 +22,14 @@ public class BOFactory {
         switch (boType) {
             case COURSE:
                 return (T) new CourseBOImpl();
+            case STUDENT:
+                return (T) new StudentBOImpl();
             default:
                 return null;
         }
     }
 
     public enum BOType{
-        COURSE
+        COURSE,STUDENT
     }
 }

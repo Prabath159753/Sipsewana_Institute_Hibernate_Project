@@ -1,6 +1,7 @@
 package lk.SipsewanaInstitute.dao;
 
 import lk.SipsewanaInstitute.dao.custom.impl.CourseDAOImpl;
+import lk.SipsewanaInstitute.dao.custom.impl.StudentDAOImpl;
 
 /**
  * @author : Kavishka Prabath
@@ -21,6 +22,8 @@ public class DAOFactory {
         switch (daoType){
             case COURSE:
                 return (T) new CourseDAOImpl();
+            case STUDENT:
+                return (T) new StudentDAOImpl();
             default:
                 return null;
         }
