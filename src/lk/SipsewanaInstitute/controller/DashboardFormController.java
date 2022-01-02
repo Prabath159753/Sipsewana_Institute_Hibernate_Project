@@ -33,9 +33,10 @@ public class DashboardFormController {
     public JFXButton btnSetting;
     public ImageView imgLogo;
 
-    public void initialize() {
+    public void initialize() throws IOException {
         fadeTransition();
         rotateAnimation();
+        lordUi();
     }
 
     void fadeTransition() {
@@ -56,13 +57,32 @@ public class DashboardFormController {
         transition.play();
     }
 
-    public void goToDashboardOnAction(ActionEvent actionEvent) {
+    void lordUi() throws IOException {
         btnDashboard.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
         btnStudent.setStyle(null);
         btnCourse.setStyle(null);
         btnRegister.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+
+        URL resource = getClass().getResource("../view/DashboardMainForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        DashboardContext.getChildren().clear();
+        DashboardContext.getChildren().add(load);
+    }
+
+    public void goToDashboardOnAction(ActionEvent actionEvent) throws IOException {
+        btnDashboard.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
+        btnStudent.setStyle(null);
+        btnCourse.setStyle(null);
+        btnRegister.setStyle(null);
+        btnHelp.setStyle(null);
+        btnSetting.setStyle(null);
+
+        URL resource = getClass().getResource("../view/DashboardMainForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        DashboardContext.getChildren().clear();
+        DashboardContext.getChildren().add(load);
     }
 
     public void goToSettingOnAction(ActionEvent actionEvent) {
