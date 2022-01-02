@@ -29,7 +29,7 @@
                   <Font name="Times New Roman" size="23.0" />
                </font>
             </JFXTextField>
-            <Label fx:id="lblCID" layoutX="173.0" layoutY="13.0" prefHeight="45.0" prefWidth="188.0" text="C-001" textFill="WHITE">
+            <Label fx:id="lblCID" layoutX="173.0" layoutY="13.0" prefHeight="45.0" prefWidth="188.0" textFill="WHITE">
                <font>
                   <Font name="Impact" size="27.0" />
                </font>
