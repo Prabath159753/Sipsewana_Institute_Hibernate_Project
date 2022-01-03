@@ -25,6 +25,14 @@ public class CourseTM {
         this.btn = btn;
     }
 
+    public CourseTM(String code, String courseName, String type, String duration, double fee) {
+        this.code = code;
+        this.courseName = courseName;
+        this.type = type;
+        this.duration = duration;
+        this.fee = fee;
+    }
+
     public String getCode() {
         return code;
     }
