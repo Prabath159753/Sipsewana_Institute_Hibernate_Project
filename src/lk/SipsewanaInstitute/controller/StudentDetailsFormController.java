@@ -194,7 +194,7 @@ public class StudentDetailsFormController {
     public void btnSaveSOnAction(ActionEvent actionEvent) {
         try {
             if (Pattern.compile("^[A-z ]{1,}$").matcher(txtSName1.getText()).matches()) {
-                if (Pattern.compile("^[A-z0-9/ ]{3,40}$").matcher(txtAddr1.getText()).matches()) {
+                if (Pattern.compile("^[A-z0-9/ ]{6,30}$").matcher(txtAddr1.getText()).matches()) {
                     if (Pattern.compile("^\\d{10}$").matcher(txtContact1.getText()).matches()) {
                         if (dataPicker1.getValue() != null) {
                             if (rbtnMale1.isSelected() || rbtnFemale1.isSelected()) {

@@ -44,6 +44,7 @@ public class RegistrationFormController {
     public TableColumn colFeeC1;
     public TableColumn colDeleteC1;
     public JFXButton btnReg;
+    public Label lblRegNo;
 
     public void btnSearchStudentROnAction(ActionEvent actionEvent) {
     }
