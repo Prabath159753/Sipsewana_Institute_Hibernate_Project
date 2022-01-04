@@ -160,7 +160,10 @@
                   </Label>
                </children>
             </Pane>
-            <JFXComboBox fx:id="cmbCourseR" editable="true" focusColor="WHITE" labelFloat="true" layoutX="25.0" layoutY="83.0" onAction="#cmbCourseROnAction" prefHeight="32.0" prefWidth="266.0" styleClass="text" stylesheets="@assets/style/style.css" unFocusColor="WHITE" />
+            <JFXComboBox fx:id="cmbCourseR" editable="true" focusColor="WHITE" labelFloat="true" layoutX="25.0" layoutY="83.0" onAction="#cmbCourseROnAction" prefHeight="32.0" prefWidth="266.0" stylesheets="@assets/style/style.css" unFocusColor="WHITE">
+               <styleClass>
+                  <String fx:value="text" />
+               </styleClass></JFXComboBox>
             <HBox layoutX="337.0" layoutY="158.0" prefHeight="37.0" prefWidth="243.0" spacing="20.0">
                <children>
                   <JFXRadioButton fx:id="rbtnFullTime" lineSpacing="10.0" style="-jfx-unselected-color: white; -jfx-selected-color: white;" text="Full Time" textFill="WHITE">

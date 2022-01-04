@@ -32,6 +32,7 @@ public class DashboardFormController {
     public JFXButton btnHelp;
     public JFXButton btnSetting;
     public ImageView imgLogo;
+    public JFXButton btnRegisteredSt;
 
     public void initialize() throws IOException {
         fadeTransition();
@@ -64,6 +65,7 @@ public class DashboardFormController {
         btnRegister.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+        btnRegisteredSt.setStyle(null);
 
         URL resource = getClass().getResource("../view/DashboardMainForm.fxml");
         Parent load = FXMLLoader.load(resource);
@@ -78,6 +80,7 @@ public class DashboardFormController {
         btnRegister.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+        btnRegisteredSt.setStyle(null);
 
         URL resource = getClass().getResource("../view/DashboardMainForm.fxml");
         Parent load = FXMLLoader.load(resource);
@@ -92,6 +95,7 @@ public class DashboardFormController {
         btnRegister.setStyle(null);
         btnHelp.setStyle(null);
         btnDashboard.setStyle(null);
+        btnRegisteredSt.setStyle(null);
     }
 
     public void goToHelpOnAction(ActionEvent actionEvent) {
@@ -101,6 +105,7 @@ public class DashboardFormController {
         btnRegister.setStyle(null);
         btnDashboard.setStyle(null);
         btnSetting.setStyle(null);
+        btnRegisteredSt.setStyle(null);
     }
 
     public void goToStudentDetailOnAction(ActionEvent actionEvent) throws IOException {
@@ -110,6 +115,7 @@ public class DashboardFormController {
         btnRegister.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+        btnRegisteredSt.setStyle(null);
 
         URL resource = getClass().getResource("../view/StudentDetailsForm.fxml");
         Parent load = FXMLLoader.load(resource);
@@ -124,6 +130,7 @@ public class DashboardFormController {
         btnRegister.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+        btnRegisteredSt.setStyle(null);
 
         URL resource = getClass().getResource("../view/CourseDetailsForm.fxml");
         Parent load = FXMLLoader.load(resource);
@@ -138,8 +145,24 @@ public class DashboardFormController {
         btnDashboard.setStyle(null);
         btnHelp.setStyle(null);
         btnSetting.setStyle(null);
+        btnRegisteredSt.setStyle(null);
 
         URL resource = getClass().getResource("../view/RegistrationForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        DashboardContext.getChildren().clear();
+        DashboardContext.getChildren().add(load);
+    }
+
+    public void goToRegisteredStOnAction(ActionEvent actionEvent) throws IOException {
+        btnRegisteredSt.setStyle("-fx-background-color: #2D3A6C ; -fx-text-fill: white; -fx-background-radius: 100 0 0 100");
+        btnStudent.setStyle(null);
+        btnCourse.setStyle(null);
+        btnDashboard.setStyle(null);
+        btnHelp.setStyle(null);
+        btnSetting.setStyle(null);
+        btnRegister.setStyle(null);
+
+        URL resource = getClass().getResource("../view/RegisteredStForm.fxml");
         Parent load = FXMLLoader.load(resource);
         DashboardContext.getChildren().clear();
         DashboardContext.getChildren().add(load);
