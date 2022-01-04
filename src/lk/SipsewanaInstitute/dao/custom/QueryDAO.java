@@ -12,5 +12,6 @@ import java.util.List;
 
 public interface QueryDAO extends SuperDAO {
     List<Student> getCourseWiseStudent(String code) throws Exception;
+    List<Student> getAllCourseWiseStudent() throws Exception;
 }
 

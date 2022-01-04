@@ -42,6 +42,7 @@ public class RegisteredStFormController {
 
     public void initialize() {
         loadAllCourseCmb();
+        loadAllData();
 
         /* set course wise student detail tab table col */
         colSID.setCellValueFactory(new PropertyValueFactory<>("ID"));
@@ -89,7 +90,22 @@ public class RegisteredStFormController {
 
     public void checkBoxSAllOnAction(ActionEvent actionEvent) {
         if (checkBoxSAll.isSelected()) {
-//            loadAllData();
+            loadAllData();
+        }
+    }
+
+    void loadAllData() {
+        listSC.clear();
+        tblStudentCWise.refresh();
+        try {
+            List<Student> courseWiseStudent = queryDAO.getAllCourseWiseStudent();
+            for (Student dto : courseWiseStudent) {
+                StudentDTO student = new StudentDTO(dto.getID(), dto.getName(), dto.getAddress(), dto.getContactNo(), dto.getDob(), dto.getGender());
+                listSC.add(student);
+            }
+            tblStudentCWise.setItems(listSC);
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
     }
 }
